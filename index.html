@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3MOORpiano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            font-weight: 900; 
+            background: url('wallpaperflare.com_wallpaper.jpg') no-repeat center center fixed;
+            background-size: cover; /* تجعل الصورة تغطي الشاشة بالكامل */
+            text-align: left; /* محاذاة النصوص والعناصر إلى اليسار */
+        }
+        h1 {
+            color: white; /* تغيير لون العنوان إلى الأبيض */
+            margin-left: 20px; /* تحريك العنوان إلى اليسار */
+        }
+        button {
+            padding: 20px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 900; 
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: black; /* تغيير لون النص في الأزرار إلى الأسود */
+            margin-left: 20px; /* تحريك الأزرار إلى اليسار */
+        }
+        .do {
+            background-color: #ea9e9e; 
+        }
+        .re {
+            background-color: #f1c771;
+        }
+        .mi {
+            background-color: #fce89f; 
+        }
+        .fa {
+            background-color: #aaf3de; 
+        }
+        .sol {
+            background-color: #abe0fb;
+        }
+        .la {
+            background-color: #d5c1fd; 
+        }
+        .si {
+            background-color: #f7aede; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Musical scale</h1>
+
+    <button class="do" onclick="playSound('do')">DO</button>
+    <button class="re" onclick="playSound('re')">RE</button>
+    <button class="mi" onclick="playSound('mi')">MI</button>
+    <button class="fa" onclick="playSound('fa')">FA</button>
+    <button class="sol" onclick="playSound('sol')">SOL</button>
+    <button class="la" onclick="playSound('la')">LA</button>
+    <button class="si" onclick="playSound('si')">SI</button>
+
+    <script>
+        function playSound(note) {
+            var audio = new Audio(note + '.wav');
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
